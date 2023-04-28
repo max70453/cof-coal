@@ -1,0 +1,40 @@
+- var collectTitle = "Our collections";
+- var collectTags = ['Central', 'Olivo', 'Morisot', 'Curve', 'Wire', 'Marguerite', 'Fizz', 'Rafael', 'Rafael'];
+
+section.collect
+  .container
+    .collect__content
+      h2.collect__title.title= collectTitle
+      .swiper
+        .swiper-wrapper
+          .swiper-slide
+            ul.collect__tag-list
+              each val in collectTags
+                li.collect__tag-item= val
+            .collect__pic-central
+              img.collect__img(src=require("../images/central.png"), alt="slider image")
+              .collect__img-text Central
+              .collect__link-text ready to become the centerpiece of your home
+                a.collect__link(href="#")
+            .collect__pic-olivo
+              img.collect__img(src=require("../images/olivo.png"), alt="slider image")
+              .collect__img-text Olivo
+              .collect__link-text Believe us, this will be a real eye-catcher
+          .swiper-slide
+            ul.collect__tag-list
+              each val in collectTags
+                li.collect__tag-item= val
+            .collect__pic-central
+              img.collect__img(src=require("../images/central.png"), alt="slider image")
+              .collect__img-text Central
+              .collect__link-text ready to become the centerpiece of your home
+                a.collect__link(href="#")
+            .collect__pic-olivo
+              img.collect__img(src=require("../images/olivo.png"), alt="slider image")
+              .collect__img-text Olivo
+              .collect__link-text Believe us, this will be a real eye-catcher
+    .swiper-arrows
+      .swiper-arrows__left
+      .swiper-pagination
+      .swiper-arrows__right
+    

@@ -1,0 +1,17 @@
+- var makTitle = "Making tables heroes";
+- var makSubtitle = "Chairs, cabinets, but especially tables by Joli are durable products, designed to last and to be used intensively.";
+
+section.making
+  .container
+    .making__contant
+      .making__text
+        h2.making__title.title= makTitle
+        p.making__subtitle.subtitle= makSubtitle
+        a.making__btn.btn-outline(href="#") about us
+        a.making__btn(href="#") collections
+        .making__image-top
+          img.making__img(src=require('../images/making-top.png'), alt="image table")
+        .making__image-left
+          img.making__img(src=require('../images/making-left.png'), alt="image left")
+        .making__image-right
+          img.making__img(src=require('../images/making-right.png'), alt="image right")
