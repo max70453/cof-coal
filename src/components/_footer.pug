@@ -1,61 +1,22 @@
--
-  const menu = [
-    {
-      name: 'Collections',
-      list: ['Wire', 'Curve', 'Fiss', 'Marguerite']
-    },
-    { 
-      name: 'Products',
-      list: ['Tables', 'Chairs', 'Cabinets', 'Accessories']
-    },
-    { 
-      name: 'Inspiration',
-      list: ['Joli Days 2022', 'Terrace', 'Ceremonies & Meetings']
-    },
-    { 
-      name: 'About us',
-      list: ['Materials', 'Find a dealer', 'Professionals', 'News']
-    },
-    { 
-      name: 'Contact',
-      list: ['Industrielaan 5', '8520 Kortrijk', 'info@joli.be']
-    },
-  ];
+- const menu = ['главная', 'контакты', 'о нас', 'оптовикам'];
   
 .footer
-  .container 
-    .footer__wrap 
-      .footer__logo 
-        img(src=require('../images/logo.svg'), alt="logo").footer__logo-img
-      .footer__content
-        .footer__menu 
-          each item in menu
-            if (item.name !== 'Contact')
-              ul.footer__list 
-                li.footer__item
-                  a(href="#").footer__link=item.name
-                each link in item.list
-                  li.footer__item
-                    a(href="#").footer__link=link
-            if (item.name === 'Contact')
-              ul.footer__list 
-                li.footer__item
-                  a(href="#").footer__link=item.name
-                each link in item.list
-                  li.footer__item
-                    .footer__link=link
-        .footer__info 
-          .footer__policy
-            .footer__col Privacy & Cookie Policy
-            .footer__col Disclaimer
-            .footer__col made by skinn
-          .footer__socials
-            .footer__social-link
-              img(src=require('../images/facebook.svg'), alt="facebook link")
-            .footer__social-link
-              img(src=require('../images/instagram.svg'), alt="instagram link")
-            .footer__social-link
-              img(src=require('../images/im.svg'), alt="pinterest link")
+  .container
+    .footer__content
+      ul.footer__menu
+        each link in menu
+          li.footer__item
+            a(href="#").footer__link= link
+      .footer__info 
+        .footer__policy
+          .footer__col Г. МАКЕЕВКА, УЛ. ЯНКИ КУПАЛЫ, 1, ГОРНЯЦКИЙ РАЙОН
+          .footer__col-number +7 988 289 2387
+          .footer-soc__icons
+            a.footer-soc__vk(href='#')
+            a.footer-soc__ok(href='#')
+            a.footer-soc__tg(href='#')
+          a.footer__btn(href="#") заказать звонок
+          
 
 
 

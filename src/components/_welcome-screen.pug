@@ -1,6 +1,14 @@
-- var title = "Lasting memories";
+- var title = "Центральная Обогатительная фабрика";
 
 section.welcome
   .container
-    include _header-nav
-    h1.welcome__title= title
+    .welcome__wrap
+      h1.welcome__title= title
+      .welcome__suptitle в макеевке с доставкой
+      a.welcome__btn(href="#") заказать звонок
+    .welcome-soc__wrap
+      .welcome-soc__title или связаться с нами через соц. сети
+      .welcome-soc__icons
+        a.welcome-soc__vk(href='#')
+        a.welcome-soc__ok(href='#')
+        a.welcome-soc__tg(href='#')

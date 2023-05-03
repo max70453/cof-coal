@@ -1,0 +1,29 @@
+section.stock
+  .container
+    h2.stock__title.title акции
+    .stock__wrap
+      .swiper.swiper-stock
+        .swiper-wrapper
+          .swiper-slide
+            .stock__pic
+              img.stock__img(src=require("../images/slide11.png"), alt="slide1")
+            .stock__content
+              .stock__text-wrap
+                .stock__discount Скидка 
+                  strong 20%
+                .stock__price 550 руб/м3 
+                  span.stock__old-price 750 руб/м3
+              a.stock__btn.btn(href="#") купить сейчас
+          .swiper-slide
+            .stock__pic
+              img.stock__img(src=require("../images/slide11.png"), alt="slide1")
+            .stock__content
+              .stock__text-wrap
+                .stock__discount Скидка 
+                  strong 20%
+                .stock__price 1350 руб/м3 
+                  span.stock__old-price 1500 руб/м3
+              a.stock__btn.btn(href="#") купить сейчас
+      .swiper-arrows__left
+      .swiper-arrows__right
+      

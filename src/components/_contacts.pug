@@ -1,0 +1,35 @@
+-
+    const contacts =
+        [
+            {src: 'phone.png', text: '+380 (6232) 7-39-16', alt: 'phone pic'}, 
+            {src: 'calendar.png', text: 'доставка 24/7'},
+            {src: 'logo.png', text: 'работа склада с 8:00 до 20:00'},
+            {src: 'metka-foot.png', text: 'г. Макеевка, ул. Янки Купалы, 1, Горняцкий район'},
+            {src: 'requisites.png', text: 'Реквизиты', }
+        ];
+
+- const requisites = ['УНП 190832780', 'ОКПО 377225215000', 'р/с BY57MMBN30120218300109330000', 'в ОАО «Банк Дабрабыт»', 'BIC банка MMBNBY22'];
+- const addressList = ['Донецкая обл., Макеевка', 'Тел.(fax) (017) 354-75-75, 256-14-03, 377-50-64 (бухг).', 'Директор – Карамышев Анатолий Павлович действующий на основании Устава'];
+
+section.contacts
+    .container 
+        h2.contacts__title.title контакты
+        .contacts__content
+            .contacts__left 
+                ul.contacts__list
+                    each item in contacts
+                        li.contacts__item
+                            div.contacts__item-pic
+                                img.contacts__item-img(src=require(`../images/${item.src}`), alt=`${item.alt}`)
+                            .contacts__text= item.text
+                .requisites__wrap
+                    ul.contacts__requisites(type="disc")
+                        each requisite in requisites
+                            li.contact__requisite= requisite
+            .contacts__right
+                .contacts__pic
+                .contacts__list-address
+                    ul.contacts__address(type="disc")
+                        each addressItem in addressList
+                            li.contact__address= addressItem
+

@@ -1,13 +1,15 @@
 {
   "name": "webpack-template",
   "version": "1.0.0",
-  "homepage": "",
+  "homepage": "https://max70453.github.io/cof-coal/",
   "description": "Web development project",
   "main": "index.js",
   "scripts": {
     "start": "set NODE_ENV=development&&webpack serve",
     "dev": "set NODE_ENV=development&&webpack",
-    "build": "set NODE_ENV=production&&webpack"
+    "build": "set NODE_ENV=production&&webpack",
+    "deploy": "gh-pages -d build",
+    "predeploy": "yarn build"
   },
   "keywords": [],
   "author": "Max",
@@ -35,6 +37,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "animate.css": "^4.1.1",
+    "gh-pages": "^5.0.0",
     "jquery": "^3.6.0",
     "jquery-validation": "^1.19.3",
     "normalize.css": "^8.0.1",

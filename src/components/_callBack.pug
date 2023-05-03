@@ -1,0 +1,17 @@
+section.call
+    .container
+        .call__content
+            h2.call__title Уточните любую информацию, заказав обратный звонок
+            .call__body
+                form.call__form(action="callBack")
+                    .call__wrap-input
+                        input.call__inp(type='text', placeholder="Ваше имя")
+                        input.call__inp(type="phone", placeholder="Ваш телефон")
+                        input.call__inp(type="email", placeholder="Ваша почта")
+                        .call__wrap-policy
+                            input.call__inp-check(type="checkbox")
+                            .call__policy Согласен с обработкой моих персональных данных в соответствии с 
+                                a.call__policy-link(href="#") политикой конфиденциальности
+                    .call__wrap-btn        
+                        .call__pic
+                        button.call__btn.btn(type="submit") Отправить

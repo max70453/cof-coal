@@ -5,25 +5,17 @@ import 'swiper/css/pagination';
 Swiper.use([Navigation, Pagination]);
 
 const Slider = function(){
-  const swiper = new Swiper('.swiper', {
-    spaceBetween: 150,
+  const swiper = new Swiper('.swiper-stock', {
+    slidesPerView: 2,
+    spaceBetween: 50,
     direction: 'horizontal',
-    loop: false,
+    loop: true,
     loopFillGroupWithBlank: true,
     
     navigation: {
       nextEl: '.swiper-arrows__left',
       prevEl: '.swiper-arrows__right',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-			clickable: true,
-      type: 'custom',
-    renderCustom: function (swiper, current, total) {
-      console.log((current + '/' + (total - 1)));
-        return "<div>" + current + "</div>" + "<div>" + '/' + "</div>" + "<div>" + (total - 1) + "</div>"; 
-    },
-    },
+    }
   });
 };
 

@@ -1,5 +1,31 @@
+-
+    const text = `
+    Мы рады вас видеть на нашем официальном сайте ЦОФ «Пролетарская». 
+    Наша компания занимается продажей Угля высокого качества по ДНР и области. 
+    <br><br>
+    В частности, осуществляем оптовые поставки угля и прочего сырья на объекты в ДНР и области.
+    <br><br>
+    Ведем активное сотрудничество с производствами, а также, с заводами и другими организациями.`;
+
 section.about
-  .container
-    .about__content
-      h2.about__title.title Joli manages to offer designs that are both timelessly modern and trendy
-      a.about__btn.btn-outline(href="#") About us
+    .container
+        .about__title.title о нас
+        .about__wrap 
+            .about__text !{text}
+            .about__pic
+        .about__photos
+            .about__photos-text наши фотографии
+            .gallery
+                .swiper.swiper-gallery
+                    .swiper-wrapper
+                        .swiper-slide
+                            .about__slide-pic
+                                img.about__img(src=require("../images/slide1g.png"), alt="slide1")
+                        .swiper-slide
+                            .about__slide-pic
+                                img.about__img(src=require("../images/slide2g.jpg"), alt="slide1")
+                        .swiper-slide
+                            .about__slide-pic
+                                img.about__img(src=require("../images/slide3g.jpg"), alt="slide1")
+                .gallery-arrows__left
+                .gallery-arrows__right

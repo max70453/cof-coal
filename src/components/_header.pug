@@ -1,0 +1,10 @@
+- const headerItems = ['главная', 'контакты', 'о нас', 'оптовикам'];
+
+header.header
+    .container
+        .header__wrap
+            .headeer__name ЦОФ Пролетарская
+            ul.header__list 
+                li.header__item
+                    each item in headerItems
+                        a(href="#").header__link=item
